@@ -42,6 +42,25 @@ export default function PracticesPage() {
                 </Link>
               </Reveal>
             ))}
+
+            <Reveal delay={PRACTICES.length * 0.09}>
+              <Link href="/practices/chartes" className="pr-card">
+                <div className="pr-card-img">
+                  <img src="/images/rawda-cheikh.jpeg" alt="" />
+                  <span className="pr-card-ico">
+                    <Icon name="book" />
+                  </span>
+                </div>
+                <div className="pr-card-b">
+                  <span className="pr-card-tag">{t("ch_tag")}</span>
+                  <h3>{t("ch_card_title")}</h3>
+                  <p>{t("ch_card_short")}</p>
+                  <span className="pr-card-link">
+                    {t("pr_discover")} <Icon name="arrow" />
+                  </span>
+                </div>
+              </Link>
+            </Reveal>
           </div>
 
           <Reveal delay={0.2}>

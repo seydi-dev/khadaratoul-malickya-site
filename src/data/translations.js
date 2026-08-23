@@ -357,6 +357,26 @@ export const T = {
     fr: "Le compteur est une simple aide visuelle.",
     en: "The counter is only a visual aid.",
   },
+  /* ---- 23 charters ---- */
+  ch_tag: { fr: "Fondements", en: "Foundations" },
+  ch_card_title: { fr: "Les 23 Chartes", en: "The 23 Charters" },
+  ch_card_short: {
+    fr: "Les conditions de la Tariqa Tidjane",
+    en: "The conditions of the Tariqa Tidjane",
+  },
+  ch_title: {
+    fr: "Les 23 Chartes de la Tariqa Tidjane",
+    en: "The 23 Charters of the Tariqa Tidjane",
+  },
+  ch_lead: {
+    fr: "Les conditions et engagements du disciple Tijâni.",
+    en: "The conditions and commitments of the Tijâni disciple.",
+  },
+  ch_count: { fr: "23 conditions", en: "23 conditions" },
+  ch_intro: {
+    fr: "Voici les 23 conditions et engagements que tout disciple de la Tariqa Tidjane s'efforce de respecter. Le texte français reprend fidèlement l'explication fournie par la communauté, sans reformulation. Touchez une charte pour la déplier.",
+    en: "Here are the 23 conditions and commitments that every disciple of the Tariqa Tidjane strives to uphold. The French text faithfully follows the explanation provided by the community, without rewording. Tap a charter to expand it.",
+  },
   /* ---- library ---- */
   lb_eyebrow: { fr: "Bibliothèque", en: "Library" },
   lb_title: { fr: "Nos recueils", en: "Our collections" },

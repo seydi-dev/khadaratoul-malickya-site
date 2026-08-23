@@ -84,10 +84,7 @@ export default function HomePage() {
       <section className="pad-lg">
         <div className="wrap split">
           <Reveal className="split-img">
-            <img
-              src="/images/portrait-maodo.jpg"
-              alt="Seydi El Hadji Malick Sy"
-            />
+            <img src="/images/intro.jpg" alt="Seydi El Hadji Malick Sy" />
           </Reveal>
           <div>
             <Reveal>

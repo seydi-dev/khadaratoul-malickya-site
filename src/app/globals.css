@@ -320,20 +320,26 @@ h3 {
 .nav-d {
   display: none;
   align-items: center;
-  gap: 26px;
+  gap: 18px;
 }
 @media (min-width: 1024px) {
   .nav-d {
     display: flex;
   }
 }
+@media (min-width: 1180px) {
+  .nav-d {
+    gap: 24px;
+  }
+}
 .nav-d a {
-  font-size: 0.76rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   position: relative;
   padding: 6px 0;
   transition: color 0.35s;
+  white-space: nowrap;
 }
 .nav-d a::after {
   content: "";
@@ -2698,4 +2704,78 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 30px;
   padding: 6px 14px;
+}
+/* ---------- 23 charters ---------- */
+.chartes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.charte {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: border-color 0.4s;
+}
+.charte.open {
+  border-color: rgba(184, 137, 47, 0.35);
+  box-shadow: var(--shadow-sm);
+}
+.charte-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  text-align: left;
+  transition: background 0.3s;
+}
+.charte-head:hover {
+  background: var(--ivory-2);
+}
+.charte-n {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  min-width: 30px;
+}
+.charte-ar-short {
+  flex: 1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--green-900);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+}
+.charte-chevron {
+  flex-shrink: 0;
+  color: var(--gold);
+  font-size: 1.1rem;
+  transition: transform 0.35s var(--ease);
+}
+.charte.open .charte-chevron {
+  transform: rotate(180deg);
+}
+.charte-body {
+  padding: 0 20px 22px 66px;
+}
+.charte-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+@media (max-width: 560px) {
+  .charte-head {
+    padding: 15px 16px;
+    gap: 12px;
+  }
+  .charte-ar-short {
+    font-size: 0.95rem;
+  }
+  .charte-body {
+    padding: 0 16px 18px 46px;
+  }
 }
