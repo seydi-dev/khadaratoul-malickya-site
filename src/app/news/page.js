@@ -8,7 +8,7 @@ import CtaBand from "@/components/CtaBand";
 
 const ARTICLES = [
   {
-    img: "/images/affiche-chapitre-10.jpg",
+    img: "/images/poster-maouloud.jpg",
     tag: "n1_tag",
     title: "n1_t",
     desc: "n1_d",

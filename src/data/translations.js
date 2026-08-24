@@ -391,8 +391,8 @@ export const T = {
     en: "About these documents",
   },
   lb_note: {
-    fr: "Ces recueils sont proposés en téléchargement dans leur forme originale, afin de préserver l'exactitude des formules religieuses qu'ils contiennent.",
-    en: "These collections are offered for download in their original form, to preserve the accuracy of the religious formulas they contain.",
+    fr: "Ces recueils sont proposés en téléchargement dans leur forme originale, afin de préserver l'exactitude des formules religieuses qu'ils contiennent.Une partie de ces documents s'appuie sur les ressources du Dahira Sope Naby France, que nous remercions pour ce travail de référence.",
+    en: "These collections are offered for download in their original form, to preserve the accuracy of the religious formulas they contain.Some of these documents draw on the resources of the Dahira Sope Naby France, whom we thank for this reference work.",
   },
   /* ---- footer ---- */
   ft_line: {
