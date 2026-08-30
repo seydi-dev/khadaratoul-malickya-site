@@ -36,8 +36,8 @@ export const LIBRARY = [
     },
     author: "Imam Al-Boussiri (1211-1294)",
     description: {
-      fr: "Falabouda",
-      en: "Falabouda",
+      fr: "Bourde",
+      en: "Bourde",
     },
     contents: [],
     cover: "/images/library/bourde-cover.jpg",
