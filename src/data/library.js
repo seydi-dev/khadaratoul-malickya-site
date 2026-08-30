@@ -42,6 +42,6 @@ export const LIBRARY = [
     contents: [],
     cover: "/images/library/bourde-cover.jpg",
     fileUrl: "/documents/bourde.pdf",
-    pages: 67,
+    pages: 139,
   },
 ];
