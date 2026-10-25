@@ -1,42 +1,19 @@
-"use client";
+import fs from "fs";
+import path from "path";
+import GalleryContent from "@/components/GalleryContent";
 
-import { useState } from "react";
-import { useLanguage } from "@/context/LanguageContext";
-import PageHead from "@/components/PageHead";
-import Reveal from "@/components/Reveal";
-import Lightbox from "@/components/Lightbox";
-import CtaBand from "@/components/CtaBand";
+const FOLDER = path.join(process.cwd(), "public", "images", "gallery");
+const IMAGE_FILE = /\.(jpe?g|png|webp)$/i;
 
-const PHOTOS = Array.from({ length: 9 }, (_, i) => `/images/gallery-${i + 1}.jpg`);
+function readFolderPhotos() {
+  if (!fs.existsSync(FOLDER)) return [];
+  return fs
+    .readdirSync(FOLDER)
+    .filter((name) => IMAGE_FILE.test(name))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+    .map((name) => `/images/gallery/${encodeURIComponent(name)}`);
+}
 
 export default function GalleryPage() {
-  const { t } = useLanguage();
-  const [open, setOpen] = useState(null);
-
-  return (
-    <>
-      <PageHead eyebrow={t("gl_eyebrow")} title={t("gl_title")} lead={t("gl_lead")} />
-
-      <section className="pad-lg">
-        <div className="wrap">
-          <div className="gal">
-            {PHOTOS.map((src, i) => (
-              <Reveal key={src} delay={(i % 3) * 0.07}>
-                <button
-                  className={`gal-i${i === 0 || i === 5 ? " big" : ""}`}
-                  onClick={() => setOpen(src)}
-                  aria-label={`Photo ${i + 1}`}
-                >
-                  <img src={src} alt="Khadaratoul Malickya" />
-                </button>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Lightbox src={open} onClose={() => setOpen(null)} />
-      <CtaBand />
-    </>
-  );
+  return <GalleryContent photos={readFolderPhotos()} />;
 }

@@ -84,7 +84,11 @@ export function getSunset(date, { latitude, longitude } = TROIS_RIVIERES) {
 }
 
 /** Formats a Date in the community's timezone, e.g. "19 h 58" (fr) / "7:58 PM" (en). */
-export function formatTime(date, lang = "fr", timeZone = TROIS_RIVIERES.timeZone) {
+export function formatTime(
+  date,
+  lang = "fr",
+  timeZone = TROIS_RIVIERES.timeZone
+) {
   if (!date) return "—";
   if (lang === "fr") {
     const parts = new Intl.DateTimeFormat("fr-CA", {
@@ -110,7 +114,7 @@ export function formatTime(date, lang = "fr", timeZone = TROIS_RIVIERES.timeZone
  * community's timezone. We use this to switch between the summer and the
  * winter running order of the Khadaratoul Jouma.
  */
-export function isSummerSchedule(date, timeZone = TROIS_RIVIERES.timeZone) {
+function isDaylightTime(date, timeZone = TROIS_RIVIERES.timeZone) {
   const nameOf = (d) =>
     new Intl.DateTimeFormat("en-US", { timeZone, timeZoneName: "short" })
       .formatToParts(d)
@@ -121,7 +125,12 @@ export function isSummerSchedule(date, timeZone = TROIS_RIVIERES.timeZone) {
   // If the abbreviation differs from January's, we are on summer time.
   return now !== nameOf(jan) || nameOf(jan) === nameOf(jul);
 }
+const WINTER_WEEKS_BEFORE = 3;
 
+export function isSummerSchedule(date, timeZone = TROIS_RIVIERES.timeZone) {
+  const later = new Date(date.getTime() + WINTER_WEEKS_BEFORE * 7 * 86400000);
+  return isDaylightTime(date, timeZone) && isDaylightTime(later, timeZone);
+}
 /** Returns the date of the next Friday (or today, if today is Friday). */
 export function nextFriday(from = new Date()) {
   const d = new Date(from);

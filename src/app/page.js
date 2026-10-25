@@ -3,9 +3,8 @@
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { SITE } from "@/data/site";
-import { EVENTS } from "@/data/events";
 import Reveal from "@/components/Reveal";
-import EventCard from "@/components/EventCard";
+import UpcomingEvents from "@/components/UpcomingEvents";
 import QuoteCarousel from "@/components/QuoteCarousel";
 import CtaBand from "@/components/CtaBand";
 import JoumaProgram from "@/components/JoumaProgram";
@@ -63,13 +62,7 @@ export default function HomePage() {
               <h2>{t("ev_title")}</h2>
             </Reveal>
           </div>
-          <div className="evt-grid">
-            {EVENTS.map((e, i) => (
-              <Reveal key={e.id} delay={i * 0.09}>
-                <EventCard event={e} />
-              </Reveal>
-            ))}
-          </div>
+          <UpcomingEvents />
           <div className="center" style={{ marginTop: 38 }}>
             <Reveal>
               <Link href="/program" className="btn btn-ghost">

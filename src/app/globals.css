@@ -1,8 +1,3 @@
-/* ============================================================
-   Khadaratoul Malickya — design system
-   Ivory · deep emerald · gold. Mobile-first, editorial layout.
-   ============================================================ */
-
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap");
 
 :root {
@@ -1178,6 +1173,10 @@ h3 {
   font-weight: 500;
   color: var(--green-900);
 }
+.jouma-act {
+  padding: 20px 28px;
+  border-top: 1px solid var(--line);
+}
 .jouma-foot {
   padding: 16px 28px;
   background: var(--ivory-2);
@@ -1203,6 +1202,7 @@ h3 {
     padding-left: 82px;
   }
   .jouma-head,
+  .jouma-act,
   .jouma-foot {
     padding-left: 20px;
     padding-right: 20px;
@@ -1768,6 +1768,75 @@ h3 {
   line-height: 1;
 }
 
+/* ---------- support ---------- */
+.sp {
+  position: fixed;
+  inset: 0;
+  z-index: 450;
+  background: rgba(10, 36, 27, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+}
+.sp-box {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: var(--ivory);
+  color: var(--green-900);
+  border-radius: 3px;
+  padding: 36px 30px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+.sp-x {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--green-800);
+}
+.sp-box h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+.sp-box p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+.sp-box dl {
+  margin: 0 0 22px;
+  text-align: left;
+}
+.sp-box dl div {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+.sp-box dt {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.sp-box dd {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--green-900);
+  word-break: break-all;
+}
+.sp-box .sp-note {
+  margin: 18px 0 0;
+  font-size: 0.8rem;
+}
+
 /* ---------- contact ---------- */
 .ct {
   display: grid;
@@ -1884,8 +1953,8 @@ h3 {
   line-height: 1.9;
 }
 /* ============================================================
-   PRATIQUES SPIRITUELLES
-   ============================================================ */
+      PRATIQUES SPIRITUELLES
+      ============================================================ */
 
 /* ---------- hub: three cards ---------- */
 .pr-hub {

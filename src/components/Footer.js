@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { NAV } from "@/data/nav";
 import { SITE } from "@/data/site";
+import SupportButton from "./SupportButton";
 
 export default function Footer() {
   const { lang, t } = useLanguage();
@@ -18,6 +19,9 @@ export default function Footer() {
               {n[lang]}
             </Link>
           ))}
+        </div>
+        <div style={{ marginBottom: 28 }}>
+          <SupportButton className="btn btn-gold" />
         </div>
         <div className="ft-b">
           <div>{t("ft_line")}</div>

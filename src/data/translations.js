@@ -133,18 +133,10 @@ export const T = {
     en: "Times are calculated from sunset in Trois-Rivières and may vary by a few minutes. Always confirm the prayer time with the community.",
   },
   jo_for: { fr: "Pour le", en: "For" },
-
-  d_wasifa: { fr: "Avant la Khadara", en: "Before the Khadara" },
-  d_khadara: { fr: "1 h 15 avant le Maghreb", en: "1 h 15 before Maghrib" },
-  d_maghrib: { fr: "À son heure exacte", en: "At its exact time" },
-  d_taissir: { fr: "Après la prière", en: "After the prayer" },
-  d_wasifa_w: {
-    fr: "15 min après la prière · 45 min",
-    en: "15 min after the prayer · 45 min",
+  jo_png: {
+    fr: "Télécharger l'horaire (PNG)",
+    en: "Download the schedule (PNG)",
   },
-  d_taissir_w: { fr: "Après la Wasifa", en: "After the Wasifa" },
-  d_motfin: { fr: "Clôture du programme", en: "End of the programme" },
-  d_souper: { fr: "30 min après la fin", en: "30 min after the end" },
 
   pr_week_e: { fr: "Chaque semaine", en: "Every week" },
   pr_week_t: { fr: "Séances hebdomadaires", en: "Weekly gatherings" },
@@ -399,4 +391,23 @@ export const T = {
     fr: "Communauté musulmane Tidjaniyya — Trois-Rivières, Québec",
     en: "Tidjaniyya Muslim community — Trois-Rivières, Québec",
   },
+  /* ---- support ---- */
+  /* ---- support ---- */
+  sp_btn: { fr: "Soutenir la Khadara", en: "Support the Khadara" },
+  sp_title: { fr: "Soutenir la Khadara", en: "Support the Khadara" },
+  sp_lead: {
+    fr: "Votre soutien aide la communauté à poursuivre ses activités. Vous pouvez envoyer un virement Interac aux coordonnées ci-dessous.",
+    en: "Your support helps the community continue its activities. You can send an Interac e-Transfer to the details below.",
+  },
+  sp_recipient: { fr: "Destinataire", en: "Recipient" },
+  sp_phone: { fr: "Numéro Interac", en: "Interac number" },
+  sp_email: { fr: "Courriel Interac", en: "Interac email" },
+  sp_copy_phone: { fr: "Copier le numéro", en: "Copy the number" },
+  sp_copy_email: { fr: "Copier le courriel", en: "Copy the email" },
+  sp_copied: { fr: "Copié", en: "Copied" },
+  sp_note: {
+    fr: "Merci pour votre générosité.",
+    en: "Thank you for your generosity.",
+  },
+  sp_close: { fr: "Fermer", en: "Close" },
 };
