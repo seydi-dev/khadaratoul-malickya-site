@@ -1,7 +1,7 @@
 import { TROIS_RIVIERES } from "./prayer";
 
 const WIDTH = 1080;
-const HEIGHT = 1350;
+const HEIGHT = 1230;
 const ROW_HEIGHT = 120;
 
 const clean = (text) => String(text).replace(/[  ]/g, " ");
@@ -101,13 +101,6 @@ export async function createJoumaPng({
     ctx.fillRect(70, y + ROW_HEIGHT - 2, WIDTH - 140, 2);
     y += ROW_HEIGHT;
   });
-
-  ctx.fillStyle = "#6e6e6e";
-  ctx.font = '400 22px "Jost", sans-serif';
-  wrapText(ctx, note, WIDTH - 200).forEach((line, i) => {
-    ctx.fillText(line, 100, y + 50 + i * 32);
-  });
-
   const isoDate = new Intl.DateTimeFormat("en-CA", {
     timeZone: TROIS_RIVIERES.timeZone,
   }).format(date);

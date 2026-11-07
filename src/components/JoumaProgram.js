@@ -53,7 +53,6 @@ export default function JoumaProgram() {
         label: STEP_LABELS[step.key][lang],
         highlight: !!step.highlight,
       })),
-      note: t("jo_note"),
     });
 
   const dateLabel = new Intl.DateTimeFormat(lang === "fr" ? "fr-CA" : "en-CA", {
