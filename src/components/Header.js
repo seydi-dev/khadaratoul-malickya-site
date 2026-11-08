@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
-import { NAV } from "@/data/nav";
+import { NAV, isActive } from "@/data/nav";
 import { SITE } from "@/data/site";
 
 export default function Header({ onOpenMenu, transparentTop = true }) {
@@ -23,8 +23,6 @@ export default function Header({ onOpenMenu, transparentTop = true }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [transparentTop]);
 
-  const isOn = (href) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
-
   return (
     <header className={`hdr${solid ? " solid" : ""}`}>
       <div className="hdr-in">
@@ -40,7 +38,7 @@ export default function Header({ onOpenMenu, transparentTop = true }) {
 
         <nav className="nav-d">
           {NAV.map((n) => (
-            <Link key={n.id} href={n.href} className={isOn(n.href) ? "on" : ""}>
+            <Link key={n.id} href={n.href} className={isActive(n, pathname) ? "on" : ""}>
               {n[lang]}
             </Link>
           ))}

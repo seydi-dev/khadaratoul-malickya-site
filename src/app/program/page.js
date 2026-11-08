@@ -13,34 +13,42 @@ import Icon from "@/components/Icon";
 export default function ProgramPage() {
   const { t } = useLanguage();
 
-  const sessions = [
-    { day: "day_fri", title: "kh_t", desc: "kh_d" },
-    { day: "day_sun", title: "wa_t", desc: "wa_d" },
-  ];
+  const sessions = [{ day: "day_fri", title: "kh_t", desc: "kh_d" }];
 
   return (
     <>
-      <PageHead eyebrow={t("pr_eyebrow")} title={t("pr_title")} lead={t("pr_lead")} />
+      <PageHead
+        eyebrow={t("pr_eyebrow")}
+        title={t("pr_title")}
+        lead={t("pr_lead")}
+      />
 
       {/* ---------- automatic Jouma programme ---------- */}
       <section className="pad-lg">
         <div className="wrap wrap-narrow">
           <div className="center">
-            <Reveal><div className="eyebrow center">{t("jo_eyebrow")}</div></Reveal>
-            <Reveal><h2>{t("jo_title")}</h2></Reveal>
-            <Reveal delay={0.09}>
-              <p className="lead" style={{ marginTop: 12, marginBottom: 40 }}>{t("jo_lead")}</p>
+            <Reveal>
+              <div className="eyebrow center">{t("jo_eyebrow")}</div>
+            </Reveal>
+            <Reveal>
+              <h2 style={{ marginBottom: 40 }}>{t("jo_title")}</h2>
             </Reveal>
           </div>
-          <Reveal delay={0.18}><JoumaProgram /></Reveal>
+          <Reveal delay={0.18}>
+            <JoumaProgram />
+          </Reveal>
         </div>
       </section>
 
       {/* ---------- weekly sessions ---------- */}
       <section className="pad tint">
         <div className="wrap">
-          <Reveal><div className="eyebrow">{t("pr_week_e")}</div></Reveal>
-          <Reveal><h2>{t("pr_week_t")}</h2></Reveal>
+          <Reveal>
+            <div className="eyebrow">{t("pr_week_e")}</div>
+          </Reveal>
+          <Reveal>
+            <h2>{t("pr_week_t")}</h2>
+          </Reveal>
           <div className="sch">
             {sessions.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.09} className="sch-item">
@@ -68,8 +76,12 @@ export default function ProgramPage() {
       <section className="dark pad-lg">
         <div className="wrap">
           <div className="center">
-            <Reveal><div className="eyebrow center">{t("pr_sp_e")}</div></Reveal>
-            <Reveal><h2>{t("pr_sp_t")}</h2></Reveal>
+            <Reveal>
+              <div className="eyebrow center">{t("pr_sp_e")}</div>
+            </Reveal>
+            <Reveal>
+              <h2>{t("pr_sp_t")}</h2>
+            </Reveal>
           </div>
           <div className="evt-grid">
             {EVENTS.map((e, i) => (

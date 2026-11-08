@@ -17,11 +17,12 @@ export const NAV = [
     icon: "beads",
   },
   {
-    id: "library",
-    href: "/library",
-    fr: "Bibliothèque",
-    en: "Library",
-    icon: "book",
+    id: "media",
+    href: "/audios",
+    match: ["/audios", "/library", "/gallery"],
+    fr: "Médiathèque",
+    en: "Media",
+    icon: "volume",
   },
   {
     id: "membership",
@@ -30,21 +31,7 @@ export const NAV = [
     en: "Membership",
     icon: "user",
   },
-  {
-    id: "structure",
-    href: "/structure",
-    fr: "Structure",
-    en: "Structure",
-    icon: "grid",
-  },
   { id: "news", href: "/news", fr: "Actualités", en: "News", icon: "news" },
-  {
-    id: "gallery",
-    href: "/gallery",
-    fr: "Galerie",
-    en: "Gallery",
-    icon: "image",
-  },
   {
     id: "contact",
     href: "/contact",
@@ -53,6 +40,12 @@ export const NAV = [
     icon: "mail",
   },
 ];
+
+/** True when the current page belongs to this menu item. */
+export function isActive(item, pathname) {
+  const paths = item.match || [item.href];
+  return paths.some((href) => (href === "/" ? pathname === "/" : pathname.startsWith(href)));
+}
 
 /** The four shown in the mobile bottom bar. */
 export const BOTTOM_NAV = ["home", "program", "membership", "contact"];

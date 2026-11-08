@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
-import { NAV } from "@/data/nav";
+import { NAV, isActive } from "@/data/nav";
 import { SITE } from "@/data/site";
 
 export default function MenuSheet({ open, onClose }) {
@@ -22,8 +22,6 @@ export default function MenuSheet({ open, onClose }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  const isOn = (href) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
-
   return (
     <div className={`sheet${open ? " open" : ""}`}>
       <div className="sheet-top">
@@ -37,7 +35,7 @@ export default function MenuSheet({ open, onClose }) {
             key={n.id}
             href={n.href}
             onClick={onClose}
-            className={isOn(n.href) ? "on" : ""}
+            className={isActive(n, pathname) ? "on" : ""}
             style={{ transitionDelay: open ? `${0.05 + i * 0.045}s` : "0s" }}
           >
             <i>0{i + 1}</i>

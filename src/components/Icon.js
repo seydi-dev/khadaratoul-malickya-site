@@ -208,6 +208,25 @@ const PATHS = {
       <path d="M4.5 12.5 6 15M19.5 12.5 18 15" />
     </>
   ),
+  play: <path d="M7 4.5v15l12-7.5-12-7.5Z" />,
+  pause: (
+    <>
+      <path d="M8 5v14" />
+      <path d="M16 5v14" />
+    </>
+  ),
+  share: (
+    <>
+      <path d="M14 5l6 6-6 6" />
+      <path d="M20 11h-8a8 8 0 0 0-8 8v1" />
+    </>
+  ),
+  volume: (
+    <>
+      <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" />
+      <path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" />
+    </>
+  ),
 };
 
 export default function Icon({ name, className = "" }) {

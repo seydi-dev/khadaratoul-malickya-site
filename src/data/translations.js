@@ -50,8 +50,8 @@ export const T = {
   off_title: { fr: "Ce que nous offrons", en: "What we offer" },
   off1_t: { fr: "Séances hebdomadaires", en: "Weekly gatherings" },
   off1_d: {
-    fr: "Khadara le vendredi et Wasifa le dimanche, pour se retrouver et se ressourcer ensemble.",
-    en: "Khadara on Friday and Wasifa on Sunday, to gather and recharge together.",
+    fr: "Khadara chaque vendredi, pour se retrouver et se ressourcer ensemble.",
+    en: "Khadara every Friday, to gather and recharge together.",
   },
   off2_t: { fr: "Accompagnement", en: "Practical support" },
   off2_d: {
@@ -266,6 +266,32 @@ export const T = {
     fr: "Quelques instants de nos rassemblements à Trois-Rivières.",
     en: "A few moments from our gatherings in Trois-Rivières.",
   },
+
+  /* ---- media library ---- */
+  md_label: { fr: "Médiathèque", en: "Media library" },
+  md_audios: { fr: "Audios", en: "Audio" },
+  md_documents: { fr: "Documents", en: "Documents" },
+  md_photos: { fr: "Photos", en: "Photos" },
+
+  /* ---- audios ---- */
+  au_eyebrow: { fr: "Médiathèque", en: "Media library" },
+  au_title: { fr: "Chants et rencontres", en: "Chants and gatherings" },
+  au_lead: {
+    fr: "Réécoutez nos chants religieux et les enregistrements de nos rencontres, ou téléchargez-les pour les écouter hors ligne.",
+    en: "Listen again to our religious chants and the recordings of our gatherings, or download them to listen offline.",
+  },
+  au_all: { fr: "Tout", en: "All" },
+  au_listen: { fr: "Écouter", en: "Listen" },
+  au_play: { fr: "Lecture", en: "Play" },
+  au_pause: { fr: "Pause", en: "Pause" },
+  au_download: { fr: "Télécharger", en: "Download" },
+  au_share: { fr: "Partager", en: "Share" },
+  au_copied: { fr: "Lien copié", en: "Link copied" },
+  au_empty: { fr: "Aucun audio pour le moment.", en: "No audio yet." },
+  au_player: { fr: "Lecteur audio", en: "Audio player" },
+  au_progress: { fr: "Position de lecture", en: "Playback position" },
+  au_volume: { fr: "Volume", en: "Volume" },
+  au_close: { fr: "Fermer le lecteur", en: "Close the player" },
 
   /* ---- contact ---- */
   ct_eyebrow: { fr: "Contact", en: "Contact" },

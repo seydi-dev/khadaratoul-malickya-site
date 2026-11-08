@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { LIBRARY } from "@/data/library";
 import PageHead from "@/components/PageHead";
+import MediaTabs from "@/components/MediaTabs";
 import Reveal from "@/components/Reveal";
 import LibraryCard from "@/components/LibraryCard";
 import CtaBand from "@/components/CtaBand";
@@ -13,6 +14,7 @@ export default function LibraryPage() {
   return (
     <>
       <PageHead eyebrow={t("lb_eyebrow")} title={t("lb_title")} lead={t("lb_lead")} />
+      <MediaTabs />
 
       <section className="pad-lg">
         <div className="wrap">

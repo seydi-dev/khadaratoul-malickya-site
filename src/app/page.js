@@ -115,11 +115,6 @@ export default function HomePage() {
             <Reveal>
               <h2>{t("jo_title")}</h2>
             </Reveal>
-            <Reveal delay={0.09}>
-              <p className="lead" style={{ marginTop: 12, marginBottom: 40 }}>
-                {t("jo_lead")}
-              </p>
-            </Reveal>
           </div>
           <Reveal delay={0.18}>
             <JoumaProgram />

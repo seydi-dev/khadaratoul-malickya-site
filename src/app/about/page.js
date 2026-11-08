@@ -5,6 +5,8 @@ import PageHead from "@/components/PageHead";
 import Reveal from "@/components/Reveal";
 import QuoteCarousel from "@/components/QuoteCarousel";
 import CtaBand from "@/components/CtaBand";
+import Icon from "@/components/Icon";
+import { CELLS } from "@/data/cells";
 
 const HONOURS = [
   {
@@ -28,7 +30,7 @@ const HONOURS = [
 ];
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <>
@@ -87,7 +89,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="pad-lg">
+      <section className="pad-lg" id="structure">
+        <div className="wrap center">
+          <Reveal>
+            <div className="eyebrow center">{t("st_eyebrow")}</div>
+          </Reveal>
+          <Reveal>
+            <h2>{t("st_title")}</h2>
+          </Reveal>
+          <Reveal delay={0.09}>
+            <p className="lead" style={{ marginTop: 12, marginBottom: 40 }}>
+              {t("st_lead")}
+            </p>
+          </Reveal>
+        </div>
+        <div className="wrap">
+          <div className="cards c3">
+            {CELLS.map((c, i) => (
+              <Reveal key={c.en} delay={(i % 3) * 0.09} className="card">
+                <span className="card-num">{String(i + 1).padStart(2, "0")}</span>
+                <div className="card-ico"><Icon name={c.icon} /></div>
+                <h3>{lang === "fr" ? c.fr : c.en}</h3>
+                <p>{lang === "fr" ? c.dfr : c.den}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pad-lg tint">
         <div className="wrap wrap-narrow center">
           <Reveal>
             <div className="ornament" style={{ marginBottom: 22 }}>

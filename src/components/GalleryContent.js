@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import PageHead from "@/components/PageHead";
+import MediaTabs from "@/components/MediaTabs";
 import Reveal from "@/components/Reveal";
 import Lightbox from "@/components/Lightbox";
 import CtaBand from "@/components/CtaBand";
@@ -18,6 +19,7 @@ export default function GalleryContent({ photos }) {
         title={t("gl_title")}
         lead={t("gl_lead")}
       />
+      <MediaTabs />
 
       <section className="pad-lg">
         <div className="wrap">

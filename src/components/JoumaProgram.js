@@ -100,8 +100,6 @@ export default function JoumaProgram() {
           {t("jo_png")}
         </button>
       </div>
-
-      <div className="jouma-foot">{t("jo_note")}</div>
     </div>
   );
 }
