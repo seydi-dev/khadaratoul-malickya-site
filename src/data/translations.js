@@ -266,7 +266,8 @@ export const T = {
     fr: "Quelques instants de nos rassemblements à Trois-Rivières.",
     en: "A few moments from our gatherings in Trois-Rivières.",
   },
-
+  gl_all: { fr: "Tout", en: "All" },
+  gl_download: { fr: "Télécharger la photo", en: "Download photo" },
   /* ---- media library ---- */
   md_label: { fr: "Médiathèque", en: "Media library" },
   md_audios: { fr: "Audios", en: "Audio" },
